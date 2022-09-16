@@ -1,5 +1,7 @@
+# Data Files
 *.csv
 *.json
+*.db
 NOTES.md
 .DS_Store
 .idea/
