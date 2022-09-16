@@ -19,6 +19,10 @@ NEWSPIDER_MODULE = 'imdb.spiders'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+# LOG_ENABLED = True
+LOG_LEVEL = 'DEBUG'  # defaults to DEBUG
+# LOG_FILE = ''
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
@@ -62,10 +66,11 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'imdb.pipelines.ImdbPipeline': 300,
-#}
-
+ITEM_PIPELINES = {
+   'imdb.pipelines.ImdbPipelineSQL': 300,
+}
+# DATABASE
+MONGO_URI = "BLAH"
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

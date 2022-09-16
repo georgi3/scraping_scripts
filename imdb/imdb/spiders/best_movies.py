@@ -38,6 +38,5 @@ class BestMoviesSpider(CrawlSpider):
             'genre': response.xpath('(//div[@class="ipc-chip-list__scroller"])[1]/a/span/text()').get(),
             'rating': response.xpath('(//div[@class="sc-7ab21ed2-2 kYEdvH"])[2]/span[1]/text()').get()+'/10',
             'movie_url': response.url,
-            'user': response.request.headers['User-Agent']
-
+            # 'user': response.request.headers['User-Agent']
         }
