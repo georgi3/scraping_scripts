@@ -1,3 +1,5 @@
 *.csv
 *.json
 NOTES.md
+.DS_Store
+.idea/
